@@ -35,9 +35,12 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidKeyStore>true</AndroidKeyStore>
     <AndroidSigningKeyStore>C:\Users\devtrend03\Downloads\largestorrn.keystore</AndroidSigningKeyStore>
-    <AndroidSigningKeyAlias>largestorrn</AndroidSigningKeyAlias>
-    <AndroidSigningStorePass>l4rg3st0r4pp</AndroidSigningStorePass>
-    <AndroidSigningKeyPass>l4rg3st0r4pp</AndroidSigningKeyPass>
+    <AndroidSigningKeyAlias>
+    </AndroidSigningKeyAlias>
+    <AndroidSigningStorePass>
+    </AndroidSigningStorePass>
+    <AndroidSigningKeyPass>
+    </AndroidSigningKeyPass>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
