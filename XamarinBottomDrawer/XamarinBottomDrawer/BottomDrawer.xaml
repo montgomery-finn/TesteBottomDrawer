@@ -2,9 +2,42 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinBottomDrawer.BottomDrawer">
-  <ContentView.Content>
-      <StackLayout>
-          <Label Text="Hello Xamarin.Forms!" />
-      </StackLayout>
+    <ContentView.Content>
+        <Grid>
+
+            <Frame 
+                x:Name="outFrame"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"/>
+
+            <!--Backdrop-->
+            <BoxView 
+                Color="#4B000000"
+                Opacity="0"
+                InputTransparent="True"
+                x:Name="backdrop">
+                <BoxView.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                </BoxView.GestureRecognizers>
+            </BoxView>
+
+            <Frame
+                x:Name="bottomToolbar"
+                HeightRequest="200"
+                VerticalOptions="End"
+                BackgroundColor="#fff"
+                CornerRadius="20"
+                TranslationY="260"
+                Padding="15, 6">
+
+                <Frame.GestureRecognizers>
+                    <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
+                </Frame.GestureRecognizers>
+
+                <Frame x:Name="inFrame"/>
+
+            </Frame>
+
+    </Grid>
   </ContentView.Content>
 </ContentView>

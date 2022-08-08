@@ -33,15 +33,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidKeyStore>true</AndroidKeyStore>
-    <AndroidSigningKeyStore>C:\Users\devtrend03\Downloads\largestorrn.keystore</AndroidSigningKeyStore>
-    <AndroidSigningKeyAlias>
-    </AndroidSigningKeyAlias>
-    <AndroidSigningStorePass>
-    </AndroidSigningStorePass>
-    <AndroidSigningKeyPass>
-    </AndroidSigningKeyPass>
-  </PropertyGroup>
+      </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>

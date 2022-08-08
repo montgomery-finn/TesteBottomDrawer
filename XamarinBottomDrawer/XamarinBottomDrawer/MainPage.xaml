@@ -1,68 +1,47 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:xamarinbottomdrawer="clr-namespace:XamarinBottomDrawer"
              x:Class="XamarinBottomDrawer.MainPage">
 
     <Grid>
+        <xamarinbottomdrawer:BottomDrawer x:Name="bottomDrawer">
+            <xamarinbottomdrawer:BottomDrawer.Out>
+                <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+                    <Button 
+                        Text="Open" 
+                        TextColor="White" 
+                        FontSize="36"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Clicked="Button_Clicked"/>
+                </Frame>
+            </xamarinbottomdrawer:BottomDrawer.Out>
 
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Button 
-                Text="Open" 
-                TextColor="White" 
-                FontSize="36"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                Clicked="Button_Clicked"/>
-        </Frame>
-
-        <!--Backdrop-->
-        <BoxView 
-            Color="#4B000000"
-            Opacity="0"
-            InputTransparent="True"
-            x:Name="backdrop">
-            <BoxView.GestureRecognizers>
-                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
-            </BoxView.GestureRecognizers>
-        </BoxView>
-
-        <Frame
-            x:Name="bottomToolbar"
-            HeightRequest="200"
-            VerticalOptions="End"
-            BackgroundColor="#fff"
-            CornerRadius="20"
-            TranslationY="260"
-            Padding="15, 6">
-
-            <Frame.GestureRecognizers>
-                <PanGestureRecognizer PanUpdated="PanGestureRecognizer_PanUpdated" />
-            </Frame.GestureRecognizers>
-
-            <StackLayout Padding="0,4">
-                <BoxView 
+            <xamarinbottomdrawer:BottomDrawer.In>
+                <StackLayout Padding="0,4">
+                    <BoxView 
                     CornerRadius="2"
                     HeightRequest="4"
                     BackgroundColor="LightGray"
                     HorizontalOptions="Center" />
 
-                <Label
+                    <Label
                     Text="Actions"
                     HorizontalOptions="Center"
                     FontSize="18"
                     FontAttributes="Bold" />
 
-                <TableView>
-                    <TableSection>
-                        <TextCell Text="Favorite" />
-                        <TextCell Text="Share" />
-                    </TableSection>
-                </TableView>
+                    <TableView>
+                        <TableSection>
+                            <TextCell Text="Favorite" />
+                            <TextCell Text="Share" />
+                        </TableSection>
+                    </TableView>
 
-            </StackLayout>
-
-        </Frame>
-
+                </StackLayout>
+            </xamarinbottomdrawer:BottomDrawer.In>
+        </xamarinbottomdrawer:BottomDrawer>
     </Grid>
 
 </ContentPage>
